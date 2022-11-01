@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.card {
+  
+    width:23%;
+    background-color: wheat;
+    border-radius: 8px;
+    margin: 40px;
+    height: 400px;
+    
+   
+    
+}
+.card:hover {
+    box-shadow: 2px 2px 10px 10px grey;
+
+}
+.card-image img{
+    width:100%;
+    height: 200px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.card-title {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card-button {
+    text-align: center;
+    margin-top: 27px;
+   
+
+}
+a:link, a:visited {
+    background-color: #f49236dc;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration:solid;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 12px;    
+}  
+a:hover {
+    background-color: rgb(255, 136, 0);
+    transition: .5s;    
+}
+.container {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.Page-name {
+    display: block;
+    font-size: 50px;
+    padding:70px 50px 30px 50px;
+    
+}

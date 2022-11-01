@@ -1,0 +1,34 @@
+<html>
+<head>
+	<script src="validator.js"></script>
+	<link rel="stylesheet" href="st.css">
+</head>
+<body onload="checkInvalidUser()">
+	<div class="center">
+	<h1>Login</h1>
+	<form id="applicationForm" action="login.php" method="post">
+		<div class="details">
+			<div class="error" id="invalidUserError">Invalid username or password</div>
+			<div class="error" id="emailError">Enter a valid email</div>
+		<div style="display: inline-block;">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAASFBMVEUAAAD///99fX3Q0ND4+PjLy8taWlpLS0tTU1P7+/uioqLh4eGBgYFwcHDx8fG1tbUxMTFhYWF2dnaNjY3BwcGurq6YmJhGRkZwuQkhAAACVklEQVRoge2a7XaCMAxACwoC4sd0jPd/0+Emtg0t/UqaP82vHXPOrpRcqE1ExRSigAu4gAu4gAvYBT4PY50hxuGsgy8iW1z0Kz7l4p7AUucir1yluLoc3G5TXFXVt/Tctpfga7P+eSQnt8eV1VzFTRxykSX3sGBrIck96X3uesldsHehkClr+1PPL+4fdomGniy5jfoxOdnCVckk97mzcdUKI6jtVq0rKxnfKtUjQ5CRHVwyn7u9dQZkzNrW/bUEgVVWj4jJnlx0n3f8hYHq866/VnK6VU6PiMiBXDSfPfy1klNq28tfGAhWeXuETI7kJvsc4C+MJJ+D/LWSw60K9giJnMiN9jnCXys5pLaj/IURYVW0R4lkJG6wzwn+wgjyOclfK9ltVbJHkWRkrrfPCP5ayXu1PWP4C8PDKjSPAslEXKfPX1Rch88XivsLwQarHhUdWC71QgarXSs5ulu89XnUclRF/Y5Z5p4wh0g+wP+tWDVsc/gPrr6Vlz5D7jfqq0njvsoZ+KxwqV9Oms+TykUmbx4cyheR3Nt/DnG1DY9KQ6lNaw5t62N8OWzIk8zRbjIBeVBzKGTrBkB7oDz1HMKGfmfLo5BHmEveAu1u8j7kxzZH+2Pxna5NuSSycyP/uuajkZvks8dPl8f0M9ty0T5zHb5wHTdxHbBxHSlyHaJyHRtzHZRztQa4miFc7R+uhhdXi4+rqcnVxuVqXHO16rmGEzjGMdgGUNhGbtiGjNjGqj4rn3uQjNZfGIbROa5hQa7xSL6BUK4R2PxRwAVcwAVcwAVsjV9XQCIzaTVDdwAAAABJRU5ErkJggg=="height="20px" width="">
+		</div>
+		<div style="display: inline-block;">
+			<input type="text" id="email" name="email" placeholder="Email">
+		</div>
+		</div>
+		<div class="details">
+		<div class="error" id="passwordError">Password cannot be empty</div>
+		<div style="display: inline-block;">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAAB2CAMAAAAqeZcjAAAAY1BMVEUAAAD////p6en8/PxUVFTDw8O1tbX29vbv7+/MzMxvb298fHzT09Pz8/Pa2trX19empqa8vLwkJCSenp4aGhqXl5eNjY0+Pj4pKSleXl42NjZjY2Ovr68KCgoRERGDg4NLS0t8Kzq1AAADoElEQVRoge3b6baiMAwA4LZsKqC4Ii5X3/8przozekmTNt3OnDNDfhc+FumSRiHdQxVdPRy/hLhu7vV2vfQ4hXA9oLhtBIxzOUvKLg+6+VueJ2NXZ8J8Rb9OwqqFCX3GnX/HbLb7sqmPqLnvmMkq4/P9xJF5wzx2vuOpj9jGYzs2+ohFFondu6hCDAyXwR7cVCHyGKzjvfJcK1u6q0LcQtmljyqErceysNmROO9pWDziTn5YKoi9oeccLqr9dVWz5f6ONrG8XjM7x85YjwfYrEE769KfzZA7yVd6uwZpt2m9WeRXvMdbIl8Z0dLOViftXAXVttCa7kyjkYnVb9Ywvqy0xp0nq70x49eofeF95cVq138wqcjDMTwbAwu/2aNZlRJOBRY+bNWDszQ2dgYOONHfEM3CZ3y2qfpnRF8ozV5cb1bKFkzz6AkOzYI31dtVKevxMYMHC16t6St8B+jD6UslWQWWHawFFhgnN+TwR7LgF3XiqFLm46OQYcPCgufF+B0/A0z3yC6cZEHfbhxPPlGGsuvxCZjLuYJ5FMlyr9vIklOMyGwT+pD92PHMgJ7YRGbHh9FdTGxWlu/7PV7oVtFZWTXFKxrD5CIBy4qJndiJjcxmj9DZzDsYbDa/nfNngBlcn/vH+TaHNGALuBSIFH1hYmv7CXyjpllrxjgkFhTrlNF0jw5nq7SqEBXKblOzW5RN9CP+RI+yqVUhMLZNz7YIq9KzamIndmL/S/aU53qaOzF72i7bLGuXnZMcyu7fQ2flshcXyI4SMGt7+zgsWKXDVGwiVkuKs2d+IeyXlr9UnGqBUBbJPjLrBYJYJLPG3eMNYZHkfWM/KphF8tncveUQFklN6xtt8Vlkga3vK8Znke1+7kIxhD1qSb2K2sCPyep5U/ZKMaxPBt2Uz4E+7Dg73VJ1arHZ0c4sWqyQiP2skJ3W4hM7sf8uC+sIjPEedJ3KuGYI65SpeWcQnbKUMpT9M+pyR1oD65YOe6XU3BJ3eDrMMau7GwZ+iekrapTlLyo844KyydfVCmUld27iGT8rkP5+Gjt1srMlWKKYMlKMJroj1ql/dI0ZyabM249rp8D20z2VepcmVl3TqFdlZB37dnbA9Zq2o+lVfW0LLQOgb6QmcPW8A7J/6/DfBVbskOpObNtYDTHVAavcxTfJL9FueIcX1hB789U+CrzbE6VLZElAVgY/6rwk/8Zhqk/O5l2dbzw6kOsmrzttP/5nfANN6i++mJtZNQAAAABJRU5ErkJggg=="height="20px" width="">
+		</div>
+		<div style="display: inline-block;">
+			<input type="password" id="password" name="password" placeholder="Password">
+		</div>
+		</div>
+		<div class="forgot">Forgot Password?</div>
+		<input type="button" onclick="submitLoginForm()" value="Login">
+		
+	</form>
+</body>
+</html>

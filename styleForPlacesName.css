@@ -1,0 +1,22 @@
+	tr:hover{background-color: lightgrey}
+	td {
+        font-size: 30px;
+        height:350px;
+     
+    }
+    h1{
+        font-size: 40px;
+        color: rgb(20, 49, 112);
+    }
+	img{
+		width: 90%;
+		margin: 5%;
+	}
+	a{
+        color:black;
+        text-decoration:solid;
+        
+    }
+    a:hover {
+        text-decoration: underline;
+    }

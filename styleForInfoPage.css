@@ -1,0 +1,31 @@
+.container {
+    position: relative;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right:20px;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    padding: 20px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+table{
+    width:100%;
+    font-size: medium;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+tr:nth-child(even) {
+background-color: powderblue;
+}
+td{
+    padding: 10px;
+}

@@ -1,0 +1,51 @@
+<html>
+<head>
+	<script src="validator.js"></script>
+	<link rel="stylesheet" href="st.css">
+</head>
+<body onload="checkInvalidEmail()">
+	<div class="center">
+	<h1>Registration</h1>
+	<form id="applicationForm" action="register.php" method="post">
+		<div class="details">
+			<div class="error" id="invalidEmailError">Email already exists</div>
+			<div class="error" id="nameError">Name cannot be empty</div>
+		<div style="display: inline-block;">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAB+CAMAAADV/VW6AAAAY1BMVEX///8AAADV1dWLi4v4+PgbGxv8/PzDw8Pe3t6xsbFnZ2dFRUXj4+Pq6urn5+d9fX2qqqpOTk4jIyOTk5O7u7uioqJeXl4TExM8PDycnJxWVlZvb2/KysozMzN2dnbx8fErKyun6xAFAAAE3klEQVRoge1b2ZKqMBSUVXZRFEcE8f+/8so4jiE5STohjnWr7PfQkJy1c1itPvjgg/8G4Vgm/np/w9pPyjH8Q+okDbI88hhEeRakyR9Q+4fWk6I9+C+kjv0gknP/7EPgxy8hH+utjvuObT06Jy+CHUY+YRcUTsnLC859x6V0Rl5tTMknbCon5GFztGH3vGPjIBr4X3bkE76W+mF8siefcFrkhWW3jN3zugUmuF5KPmFty35wwe55ByvyOHDD7nmBhQHEZ1fsnnc2519sdCw60293yn7jN/p+lzt/h9H+O7O6JwKc3ZHHzQH7n5NoIwKMP+Vr2D0Pir+ujf4JyPwX5jgVTnp2/3XsnqfN/+GC6kKPL1390xg8LMrbG3Jt7c+gUbNXcF2XN331Xc+PVd/k6Kqjuv5Ea9qsn6/rM3DhRsUOunxLdBGFovdjoXJ+rJtI6cUptPgiZy+Q9Vep9/hXZL28/0IS3aDwXX8AHiBNfSPQRR6VIkICOM5O1v/WwLtr4hYSM2t6aQz075qwAYWtLZ15gDcftDkrBo6f3kHA8CQuxwJwP9r49LH7C0jYsT5nRdQ6YO+BfA3VC9TuA8sgxQaIXdRn6GP2FlIrQr0DtcQy/Usrs9UTQNYUFyX6RZJ4wQOIXmLoBBymJ7gI9PoniQ4MeD2oGQP7KHo+UK6AQl2lf1LGrwmBcs3d1+e8D41Averu7CM+6SJVHhDxJyBFF1/xATuGtuhIzcSfI1IntJBCESMlLx/1kZ5e0yP8AOpU+F5/D6zBBApIGtnb0OdIvocaLit6RB/BlBk7+lxPj3WbPD0oJ2lPHxTF+G1ERQ1N4EXCxwTe8dB1g9L5KqTLor4CVtO2ijvCEbxoFIMuknLuyKUdegmLHELKQRLuAxL3MxBDhYSLlBu/2BAbUJrcNQrlhpmIPTScBVYNanTfEHMnJo08cU5/36BKTeV/sXJAPY/Brr0EwaU1uNp+gIge5g+xB2G4oDDmAlSTBUbr6HqV1BPH6xUMHlTmgKL+pi/GMkmJ6Latk3Isesj9SHlD/+pPf084ms2vMQH+T8oLWs/PZu193J/OXT4MeXc+9bMqqNBFMLpiVu/+lajyw3AcQ6LpT9XyJi0tKYW1zmgWpVDdB0mENVVjbnoJrbr+lskEclEVbK9YSIO4VFSVGd/RagBhLQkP8lZNIkpZjj9I8r/CiMjrBL4ohkEW74rrBLLiszj3B6jzV96kiiFLq2GrIOrbanFOaE+p5GQAPo3qmmTufdVlvR584a/bS+4S1Xrm54G5+WsvUeeRX2WmIGbOBIyQMcr2zsHMX8mEUkSQZ8YHxG7AHEz/gk3PMM5/XswfMjU4uJeMuSw+fOboYTNmqk6zcSMe7ByIweAak/pUDbUObMNtMDY0G5qyH7hkxzzNhtZm0zOWSYdNOMZnyPJnNvN+bL1rOjDHDa1FxsF3zXYNFuOCXLWYGVmAPyv1bYYlV3zXR0kaNLhGx25UdCVUaw30AiWXsxckTX5MONM+a811WEvGhIkh6V3QS+PQ2AtD/MuGpFfUiPjQ1n7JPTYu/boV1KXFI+IryYD8rjsH9b73b+j3dXDuiAbJyYD86s2/B0x4688RE976a8iEt/4YM+GtvwXd4Z9UP0WdXvlT1ANv/CXsgTf+EPfBBx8sxD8SrEB2niv1BAAAAABJRU5ErkJggg==" height="20px" width="20px">
+		</div>
+		<div style="display: inline-block;">
+			<input type="text" id="name" name="name" placeholder="Name">
+		</div>
+		</div>
+		<div class="details">
+		<div class="error" id="emailError">Enter a valid email</div>
+		<div style="display: inline-block;">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAASFBMVEUAAAD///99fX3Q0ND4+PjLy8taWlpLS0tTU1P7+/uioqLh4eGBgYFwcHDx8fG1tbUxMTFhYWF2dnaNjY3BwcGurq6YmJhGRkZwuQkhAAACVklEQVRoge2a7XaCMAxACwoC4sd0jPd/0+Emtg0t/UqaP82vHXPOrpRcqE1ExRSigAu4gAu4gAvYBT4PY50hxuGsgy8iW1z0Kz7l4p7AUucir1yluLoc3G5TXFXVt/Tctpfga7P+eSQnt8eV1VzFTRxykSX3sGBrIck96X3uesldsHehkClr+1PPL+4fdomGniy5jfoxOdnCVckk97mzcdUKI6jtVq0rKxnfKtUjQ5CRHVwyn7u9dQZkzNrW/bUEgVVWj4jJnlx0n3f8hYHq866/VnK6VU6PiMiBXDSfPfy1klNq28tfGAhWeXuETI7kJvsc4C+MJJ+D/LWSw60K9giJnMiN9jnCXys5pLaj/IURYVW0R4lkJG6wzwn+wgjyOclfK9ltVbJHkWRkrrfPCP5ayXu1PWP4C8PDKjSPAslEXKfPX1Rch88XivsLwQarHhUdWC71QgarXSs5ulu89XnUclRF/Y5Z5p4wh0g+wP+tWDVsc/gPrr6Vlz5D7jfqq0njvsoZ+KxwqV9Oms+TykUmbx4cyheR3Nt/DnG1DY9KQ6lNaw5t62N8OWzIk8zRbjIBeVBzKGTrBkB7oDz1HMKGfmfLo5BHmEveAu1u8j7kxzZH+2Pxna5NuSSycyP/uuajkZvks8dPl8f0M9ty0T5zHb5wHTdxHbBxHSlyHaJyHRtzHZRztQa4miFc7R+uhhdXi4+rqcnVxuVqXHO16rmGEzjGMdgGUNhGbtiGjNjGqj4rn3uQjNZfGIbROa5hQa7xSL6BUK4R2PxRwAVcwAVcwAVsjV9XQCIzaTVDdwAAAABJRU5ErkJggg==" height="20px" width="20px">
+		</div>
+		<div style="display: inline-block;">		
+			<input type="text" id="email" name="email" placeholder="Email">
+		</div>
+		</div>
+		<div class="details">
+		<div class="error" id="passwordError">Password cannot be empty</div>
+		<div style="display: inline-block;">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAAB2CAMAAAAqeZcjAAAAY1BMVEUAAAD////p6en8/PxUVFTDw8O1tbX29vbv7+/MzMxvb298fHzT09Pz8/Pa2trX19empqa8vLwkJCSenp4aGhqXl5eNjY0+Pj4pKSleXl42NjZjY2Ovr68KCgoRERGDg4NLS0t8Kzq1AAADoElEQVRoge3b6baiMAwA4LZsKqC4Ii5X3/8przozekmTNt3OnDNDfhc+FumSRiHdQxVdPRy/hLhu7vV2vfQ4hXA9oLhtBIxzOUvKLg+6+VueJ2NXZ8J8Rb9OwqqFCX3GnX/HbLb7sqmPqLnvmMkq4/P9xJF5wzx2vuOpj9jGYzs2+ohFFondu6hCDAyXwR7cVCHyGKzjvfJcK1u6q0LcQtmljyqErceysNmROO9pWDziTn5YKoi9oeccLqr9dVWz5f6ONrG8XjM7x85YjwfYrEE769KfzZA7yVd6uwZpt2m9WeRXvMdbIl8Z0dLOViftXAXVttCa7kyjkYnVb9Ywvqy0xp0nq70x49eofeF95cVq138wqcjDMTwbAwu/2aNZlRJOBRY+bNWDszQ2dgYOONHfEM3CZ3y2qfpnRF8ozV5cb1bKFkzz6AkOzYI31dtVKevxMYMHC16t6St8B+jD6UslWQWWHawFFhgnN+TwR7LgF3XiqFLm46OQYcPCgufF+B0/A0z3yC6cZEHfbhxPPlGGsuvxCZjLuYJ5FMlyr9vIklOMyGwT+pD92PHMgJ7YRGbHh9FdTGxWlu/7PV7oVtFZWTXFKxrD5CIBy4qJndiJjcxmj9DZzDsYbDa/nfNngBlcn/vH+TaHNGALuBSIFH1hYmv7CXyjpllrxjgkFhTrlNF0jw5nq7SqEBXKblOzW5RN9CP+RI+yqVUhMLZNz7YIq9KzamIndmL/S/aU53qaOzF72i7bLGuXnZMcyu7fQ2flshcXyI4SMGt7+zgsWKXDVGwiVkuKs2d+IeyXlr9UnGqBUBbJPjLrBYJYJLPG3eMNYZHkfWM/KphF8tncveUQFklN6xtt8Vlkga3vK8Znke1+7kIxhD1qSb2K2sCPyep5U/ZKMaxPBt2Uz4E+7Dg73VJ1arHZ0c4sWqyQiP2skJ3W4hM7sf8uC+sIjPEedJ3KuGYI65SpeWcQnbKUMpT9M+pyR1oD65YOe6XU3BJ3eDrMMau7GwZ+iekrapTlLyo844KyydfVCmUld27iGT8rkP5+Gjt1srMlWKKYMlKMJroj1ql/dI0ZyabM249rp8D20z2VepcmVl3TqFdlZB37dnbA9Zq2o+lVfW0LLQOgb6QmcPW8A7J/6/DfBVbskOpObNtYDTHVAavcxTfJL9FueIcX1hB789U+CrzbE6VLZElAVgY/6rwk/8Zhqk/O5l2dbzw6kOsmrzttP/5nfANN6i++mJtZNQAAAABJRU5ErkJggg==" height="20px" width="20px">
+		</div>
+		<div style="display: inline-block;">		
+			<input type="password" id="password" name="password" placeholder="Password">
+		</div>
+		</div>
+		<div class="details">
+		<div class="error" id="confirmPasswordError">Password does not match</div>
+		<div style="display: inline-block;">		
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB7CAMAAABjGQ9NAAAAY1BMVEUAAAD///9TU1NlZWV8fHx4eHjq6upxcXHm5ua/v7+7u7v5+fnX19efn5/09PTt7e0VFRUNDQ3Hx8crKys0NDRgYGBDQ0M5OTmHh4exsbEmJibPz88+Pj7e3t6VlZUhISGnp6cHigDJAAAEWElEQVRoge2b2YKqMAyGBZEdiogoIo7v/5RnzgxdgDRdoMyN/61tP+2WNIkH7+90sOsW9+kruvq+fwyKJCe7sUkdtF8HURe/yEv37KyPLgdI7St2zO5aEPyrY+6QnX4h5P+6Do7YA/abqYLMBbvQIH/r0W/OJscFpWpuzwbYeMXG7LiZYtsgzQdCShIOeRdNP9Sedz32cBbHvr3nW6q/T+BHPbgWe5gMDJ+kTpx9Xwuuw47FUeWnqKuEZhuxS2HC31jDLOINo23YVzZgq7q4Os1vqct+seGuanvR85tPfcEq2T3fZMrBvjU8aPNG+U1V7IydXa3tI27M+1o2m/FGDy0eSNWsK9gxPTdVqMv2UrY/1rHZfZVqoz2PHTWFWcHZpclxZSJ0vyl2J85+0xk384fYMce74Wy62i8jtJe1Wv1Qdk6/v6kTSrfb2Z5ND1hgiPZKatRQ/w1l06kz9D89fj7QScfYdJdfjNFstdCdjrET3csRGncU5kRgbLrcJvcK1Wnsi12HGJveTxZPLeZRJ3bszB/7W6DZemEOMzJw+bTeatyUYscTYZPRB1GZI1DZyD7ZscPxRjWyI3xgdWeMff6wrdm26/1hf9gftlM2Oau7K9k2tqQu7tR8X442GjvfgntRm7BT/tzfRlfQhQDYSaMezFgNQF+wy5N6ICudFq7XnE10gqZ2auch/hmbPSFd6EIwdnZziD4cnhnCXgZst1UkZ6fq3itVS9mqtMB6XWTsRN13tWoJe+vbDFIEszN1zw0Es+td2D3Ifqk7bqACZAe7sO8g25URmSr4w999+rAdsRu/knziml2lpUfu8GeO2effOCR8Xzhmj0HUEJx2t2wazmMxst3YDxavL0Ff2yH7xlMFsBfkjt1ydA6fMmfsloduc0kTV+wnf3oMsjaO2E8+Vi9t5IYtJPsRF8gJW8hQYw6vC7ZQX4E+MRywhUA3/rrZni2gFS8MY3ZBvBouHfuVkIrqkGY27B+fGjYN8/HeCrQpe2xeyuCC26suuDJkd2MDAsON0KZsVqoSQmEJAa3zsjFk851Eli90Q7TxXutYm3JuGIVEr8Q5XMkW4PH0qBWmaIu7hadjBxH+1uu9ji3kVHO+5nw6vAjpu5YtBEqYRyKg9YNjVvd5PocL0VmDSI2dLeHwH4eotkLb2jEeKulFdGYUn7JkV/yXJwJabmM2ZItwjjYMelv7DudlgZJp5HmF3zKr28iM8xsr2NOKLmIeb1/jrzUCPH4ao9f5ivy5F9tkGdb5qTTnEmLeoyP2mPYI7SL9a/3zKg1DlS8sExzT1DT+KwXHcjX/ULBScAx7n9h9DbL3yVlkIHuXXI1YmCWy3afmprV0O+fmHp6M7T45J89J6nu6lkJysV7pOAddImwvdrnkj5njsag5cJf4fyhqDr5vGFf592V5MFBjklp4I0o9geJeqLam7KRZHjtVfgrV9kpqiobkFfnbKHolkip0y/+mbqJ/9VM8mHS5GSIAAAAASUVORK5CYII=" height="20px" width="20px">
+		</div>
+		<div style="display: inline-block;">		 	
+			<input type="password" id="confirm_password" placeholder="Confirm password">
+		</div>
+		
+		<input type="button" onclick="submitRegistrationForm()" value="Register">
+	</form>	
+
+</body>
+</html>
